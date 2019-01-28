@@ -1,0 +1,70 @@
+{
+  "name": "@uxui/use-clipboard",
+  "version": "0.0.1",
+  "description": "React hook helps ease the work of copying to clipboard.",
+  "keywords": [
+    "react",
+    "copy to clipboard",
+    "clipboard",
+    "hook"
+  ],
+  "author": "Zlatan Pham <zlatan.pham@gmail.com> (https://github.com/zlatanpham)",
+  "license": "MIT",
+  "repository": "zlatanpham/copy-to-clipboard-react",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "./lib",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:es",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "clean": "rimraf lib esm",
+    "lint": "eslint --ext js,ts,tsx src",
+    "prettify": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "dependencies": {
+    "react": "^16.12.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/react": "16.9.11",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.{js,jsx,ts,tsx,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "files": [
+    "lib",
+    "esm"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "allowSyntheticDefaultImports": true
+  },
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
