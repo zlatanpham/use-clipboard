@@ -1,6 +1,6 @@
 {
   "name": "@uxui/use-clipboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React hook helps ease the work of copying to clipboard.",
   "keywords": [
     "react",
