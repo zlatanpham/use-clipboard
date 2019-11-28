@@ -10,7 +10,7 @@
 npm install --save @uxui/use-clipboard
 ```
 
-### Return Detail
+### Return
 
 - `copy: (content: string) => void`: copy any thing passed to param `content` to clipboard.
 - `copied: boolean`: state whick will get truthy after `copy()` gets called.
@@ -20,10 +20,10 @@ npm install --save @uxui/use-clipboard
 
 ```jsx
 import React from "react";
-import useCopyToClipboard from "@uxui/copy-to-clipboard-react";
+import useClipboard from "@uxui/useClipboard";
 
 export const App = () => {
-  const { copied, copy, turnOffCopied } = useCopyToClipboard();
+  const { copied, copy, turnOffCopied } = useClipboard();
   const message = "Some text need to be copied";
 
   return (

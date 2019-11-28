@@ -12,7 +12,7 @@ const copyToClipboard = (content: string) => {
   document.body.removeChild(textArea);
 };
 
-export default function useCopyToClipboard() {
+export default function useClipboard() {
   const [copied, setCopied] = useState(false);
 
   return {
